@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundInsideColor" format="color"/>
+        <attr name="textProgressColor" format="color"/>
+        <attr name="textTitleColor" format="color"/>
+        <attr name="progress" format="float"/>
+        <attr name="textProgressSize" format="dimension"/>
+        <attr name="textTitleSize" format="dimension"/>
+        <attr name="roundWidth" format="dimension"/>
+        <attr name="titleStr" format="string"/>
+        <attr name="progressStr" format="string"/>
+        <attr name="isShowProgress" format="boolean"/>
+    </declare-styleable>
+
+</resources>
