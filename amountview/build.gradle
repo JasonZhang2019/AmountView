@@ -36,17 +36,17 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 //项目主页
-def siteUrl = 'https://github.com/octupos2016/RoundProgressBar'    // project homepage
+def siteUrl = 'https://github.com/octupos2016/AmountView'    // project homepage
 //项目的版本控制地址
-def gitUrl = 'https://github.com/octupos2016/RoundProgressBar.git' // project git
+def gitUrl = 'https://github.com/octupos2016/AmountView.git' // project git
 
 //发布到组织名称名字，必须填写
 group = "com.octopus"
 //发布到JCenter上的项目名字，必须填写
-def libName = "round-progressbar"
+def libName = "amountView"
 // 版本号，下次更新是只需要更改版本号即可
 version = "0.0.2"
-/**  上面配置后上传至jcenter后的编译路径是这样的： compile 'com.octopus:round-progressbar:0.0.1'  **/
+/**  上面配置后上传至jcenter后的编译路径是这样的： compile 'com.octopus:amountView:0.0.1'  **/
 
 //生成源文件
 task sourcesJar(type: Jar) {
@@ -89,12 +89,12 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'This is RoundProgressBar'
+                name 'This is amountView'
                 url siteUrl
                 licenses {
                     license {
-                        name 'This is RoundProgressBar'
-                        url 'https://github.com/octupos2016/RoundProgressBar'
+                        name 'This is amountView'
+                        url 'https://github.com/octupos2016/AmountView'
                     }
                 }
                 developers {
@@ -124,7 +124,7 @@ bintray {
     pkg {
         repo = "maven" // 库名
         name = libName    //发布到JCenter上的项目名字，必须填写
-        desc = 'This is RoundProgressBar'    //项目描述
+        desc = 'This is amountView'    //项目描述
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

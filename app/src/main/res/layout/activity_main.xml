@@ -17,6 +17,7 @@
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
+        app:currentValue="13"
         app:minValue="10"
         app:textSize="8sp" />
 
@@ -25,6 +26,8 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
+        app:currentValue="5"
+        app:maxValue="99"
         app:minValue="3"
         app:textSize="10sp" />
 

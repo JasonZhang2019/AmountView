@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.amountview_1)
     AmountView amountview1;
+    @BindView(R.id.amountview_2)
+    AmountView amountview2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +31,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-//        amountview1.setAmountTextSize(DisplayUtils.sp2px(13));
+        amountview1.setCurrentValue(6);
         amountview1.setOnChangeListener(new AmountView.OnChangeListener() {
             @Override
             public void onChanged(int value) {
                 ToastUtils.showToast("--->" + value);
             }
         });
+
+        amountview2.setMinValue(4);
     }
 
 }

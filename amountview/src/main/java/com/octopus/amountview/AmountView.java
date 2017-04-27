@@ -27,7 +27,8 @@ public class AmountView extends FrameLayout {
     private AttributeSet mAttrs;
 
     //------------------------attrs-----------------------------
-    private float textSize; // default 13sp
+    private float textSize; // default 8sp
+    private int currentValue; // default use minValue
     private int minValue = 1; // must no less than 1,default is 1
     private int maxValue = 99; // default is 99
 
@@ -125,8 +126,16 @@ public class AmountView extends FrameLayout {
             reduceBtn.setTextSize(textSize);
             increaseBtn.setTextSize(textSize);
 
+
             minValue = typedArray.getInteger(R.styleable.AmountView_minValue, 1);
+            if (minValue < 1) {
+                minValue = 1;
+            }
             maxValue = typedArray.getInteger(R.styleable.AmountView_maxValue, 99);
+            if (maxValue < minValue) {
+                maxValue = minValue;
+            }
+            currentValue = typedArray.getInteger(R.styleable.AmountView_currentValue, minValue);
 //
 //        isShowProgress = typedArray.getBoolean(R.styleable.RoundProgressBar_isShowProgress, true);
 //
@@ -135,7 +144,7 @@ public class AmountView extends FrameLayout {
             typedArray.recycle();
         }
 
-        amountEt.setText(String.valueOf(minValue));
+        amountEt.setText(String.valueOf(currentValue));
 
         addView(rootView);
     }
@@ -157,7 +166,11 @@ public class AmountView extends FrameLayout {
     }
 
     public void setMinValue(int minValue) {
+        if (minValue > maxValue) {
+            minValue = maxValue;
+        }
         this.minValue = minValue;
+        setCurrentValue(getCurrentValue());
     }
 
     public int getMaxValue() {
@@ -165,15 +178,24 @@ public class AmountView extends FrameLayout {
     }
 
     public void setMaxValue(int maxValue) {
+        if (maxValue < minValue) {
+            maxValue = minValue;
+        }
         this.maxValue = maxValue;
-    }
-
-    public OnChangeListener getOnChangeListener() {
-        return mOnChangeListener;
+        setCurrentValue(getCurrentValue());
     }
 
     public void setOnChangeListener(OnChangeListener mOnChangeListener) {
         this.mOnChangeListener = mOnChangeListener;
+    }
+
+    public int getCurrentValue() {
+        return Integer.parseInt(amountEt.getText().toString());
+    }
+
+    public void setCurrentValue(int currentValue) {
+        this.currentValue = currentValue;
+        amountEt.setText(String.valueOf(currentValue));
     }
     //----------------------------- get/set ----------------------------------------
 
