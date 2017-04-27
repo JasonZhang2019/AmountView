@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_border_gray"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/reduce_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_transparent_passcolor"
+        android:text="-" />
+
+    <View
+        android:layout_width="1.5px"
+        android:layout_height="match_parent"
+        android:background="@color/gray_8c" />
+
+    <EditText
+        android:id="@+id/amount_et"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="@null"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLines="1"
+        android:text="1"
+        android:textSize="8sp" />
+
+    <View
+        android:layout_width="1.5px"
+        android:layout_height="match_parent"
+        android:background="@color/gray_8c" />
+
+    <Button
+        android:id="@+id/increase_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_transparent_passcolor"
+        android:text="+" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="gray_8c">#8C8C8C</color>
+
+    <color name="pass_color">#08000000</color>
+</resources>

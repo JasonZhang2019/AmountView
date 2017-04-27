@@ -1,1 +1,1 @@
-include ':app', ':round-progressbar'
+include ':app', ':amountview'

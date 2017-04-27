@@ -1,60 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.octopus.roundprogressbar.MainActivity">
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none">
+    <com.octopus.amountview.AmountView
+        android:id="@+id/amountview_1"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        app:textSize="6sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <com.octopus.amountview.AmountView
+        android:id="@+id/amountview_2"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:minValue="10"
+        app:textSize="8sp" />
 
-            <com.octopus.round_progressbar.RoundProgressBar
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="12dp"
-                app:isShowProgress="true"
-                app:progress="47"
-                app:progressStr="progressStr"
-                app:roundColor="#e0e0e0"
-                app:roundInsideColor="#ffffff"
-                app:roundProgressColor="#00ff00"
-                app:roundWidth="4dp"
-                app:textProgressColor="#ff0000"
-                app:textProgressSize="16sp"
-                app:textTitleColor="#0000ff"
-                app:textTitleSize="14sp"
-                app:titleStr="item1" />
-
-            <com.octopus.round_progressbar.RoundProgressBar
-                android:id="@+id/rpb_item3"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="12dp"
-                app:progress="50" />
-
-            <com.octopus.round_progressbar.RoundProgressBar
-                android:id="@+id/rpb_item1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="12dp"
-                app:isShowProgress="false"
-                app:progress="100"
-                app:progressStr="跳过"
-                app:roundWidth="4dp"
-                app:textProgressColor="#4e4e4e"
-                app:textProgressSize="12sp"
-                app:textTitleColor="#4e4e4e"
-                app:textTitleSize="12sp"
-                app:titleStr="广告" />
-        </LinearLayout>
-    </ScrollView>
+    <com.octopus.amountview.AmountView
+        android:id="@+id/amountview_3"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:minValue="3"
+        app:textSize="10sp" />
 
 </LinearLayout>
